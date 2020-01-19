@@ -16,7 +16,7 @@ docker-compose is at /usr/local/bin/docker-compose
 
 ## to stop the stack
 
-/usr/local/bin/docker-compose down`
+`/usr/local/bin/docker-compose down`
 
 ### To stop and erase all data (Danger!!)
 
