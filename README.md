@@ -1,3 +1,41 @@
+# SNOWBALL
+
+The ELK is installed on sb-vm-elk
+login to the machine with your username and then as root:
+
+`sudo -s` (enter password when prompt)
+
+Navigate to the install dir at
+
+`cd /root/docker-elk`
+
+docker-compose is at /usr/local/bin/docker-compose
+
+## to run the stack
+`/usr/local/bin/docker-compose up`
+
+## to stop the stack
+
+/usr/local/bin/docker-compose down`
+
+### To stop and erase all data (Danger!!)
+
+`/usr/local/bin/docker-compose down -v`
+
+
+## to preform us update use git commands
+
+
+## scalability options:
+https://github.com/deviantony/docker-elk/wiki/Elasticsearch-cluster
+
+
+
+
+
+
+
+
 # Elastic stack (ELK) on Docker
 
 [![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
