@@ -18,7 +18,7 @@ services:
         target: /usr/share/elasticsearch/data
       - type: volume
         source: elasticsearch-backups
-        target: /home/liorbh/es_backups
+        target: /var/backups
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -58,6 +58,7 @@ services:
 
   kibana:
     restart: always
+    user: root
     build:
       context: kibana/
       args:
