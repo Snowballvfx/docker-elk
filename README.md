@@ -25,6 +25,7 @@ docker-compose is at /usr/local/bin/docker-compose
 
 ## to preform us update use git commands
 
+`git pull origin master`
 
 ## scalability options:
 https://github.com/deviantony/docker-elk/wiki/Elasticsearch-cluster
