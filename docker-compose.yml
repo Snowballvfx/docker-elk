@@ -16,7 +16,6 @@ services:
       - type: volume
         source: elasticsearch
         target: /usr/share/elasticsearch/data
-      - elasticsearch-backups:/var/backups:rw
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -78,4 +77,3 @@ networks:
 
 volumes:
   elasticsearch:
-  elasticsearch-backups:
