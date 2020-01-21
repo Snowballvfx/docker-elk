@@ -58,7 +58,6 @@ services:
 
   kibana:
     restart: always
-    user: root
     build:
       context: kibana/
       args:
