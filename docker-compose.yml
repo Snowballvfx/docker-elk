@@ -3,7 +3,6 @@ version: '3.2'
 services:
   elasticsearch:
     restart: always
-    user: root
     build:
       context: elasticsearch/
       args:
