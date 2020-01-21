@@ -17,7 +17,7 @@ services:
         target: /usr/share/elasticsearch/data
       - type: volume
         source: elasticsearch-backups
-        target: /var/backups
+        target: /home/liorbh/es_backups
     ports:
       - "9200:9200"
       - "9300:9300"
