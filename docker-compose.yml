@@ -79,4 +79,4 @@ networks:
 
 volumes:
   elasticsearch:
-  elasticsearch-backups:
+  elasticsearch-backups:/var/backups
