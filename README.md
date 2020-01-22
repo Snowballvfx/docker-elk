@@ -31,6 +31,32 @@ docker-compose is at /usr/local/bin/docker-compose
 https://github.com/deviantony/docker-elk/wiki/Elasticsearch-cluster
 
 
+## to set up snapshots
+
+in elasticsearch.yml, add:
+
+```
+path:
+  repo: /usr/share/elasticsearch/backups
+```
+
+in docker-compose.yml, add:
+
+```
+services:
+  elasticsearch:
+    volumes:
+      - type: volume
+        source: elasticsearch-repo
+        target: /usr/share/esdata/
+
+<all the way in the bottom>
+
+volumes:
+  elasticsearch-repo:
+```
+
+
 
 
 
