@@ -1,4 +1,4 @@
-# SNOWBALL
+# SNOWBALL ELK
 
 The ELK is installed on sb-vm-elk
 login to the machine with your username and then as root:
@@ -56,12 +56,43 @@ volumes:
   elasticsearch-repo:
 ```
 
+And then, we need to set correct permissions on the volume, from inside the docker.
 
+`docker ps`
 
+Get the ID of docker-elk_elasticsearch, and get indside it.
 
+```
+docker exec -it <container ID> bash
+chmod 777 <path/to/folder>
+```
 
+Almost done, to see the mount-point, exit the docker using ctrl+d
 
+```
+docker volume ls (find the volume name)
+docker volume inspect <volume name>
 
+(expect something like)
+[
+    {
+        "CreatedAt": "2020-01-22T18:36:30+02:00",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.project": "docker-elk",
+            "com.docker.compose.version": "1.25.0",
+            "com.docker.compose.volume": "elasticsearch-backups"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/docker-elk_elasticsearch-backups/_data", <----- YOUR DATA HERE
+        "Name": "docker-elk_elasticsearch-backups",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+```
+
+Now you have to find a way to backup this data outside of the host machine.
 
 # Elastic stack (ELK) on Docker
 
